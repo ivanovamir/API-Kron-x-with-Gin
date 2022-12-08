@@ -1,0 +1,13 @@
+[Unit]
+Description=kron-x
+After=network.target
+
+[Service]
+WorkingDirectory=/home/gumaonelove/kron-x/golang_backend/cmd
+ExecStart=/home/gumaonelove/kron-x/golang_backend/cmd/main
+KillMode=process
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

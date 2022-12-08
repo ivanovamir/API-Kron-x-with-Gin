@@ -1,0 +1,1154 @@
+basePath: /
+definitions:
+  dto.About:
+    properties:
+      main_image:
+        type: string
+      main_office_image_1:
+        type: string
+      main_office_image_2:
+        type: string
+      main_office_image_3:
+        type: string
+      main_office_image_4:
+        type: string
+      main_office_image_5:
+        type: string
+      secondary_image:
+        type: string
+      stock_image_6:
+        type: string
+      stock_image_7:
+        type: string
+    type: object
+  dto.CartProduct:
+    properties:
+      category:
+        type: string
+      category_name:
+        type: string
+      count:
+        type: string
+      id:
+        type: string
+      image_128:
+        type: string
+      price:
+        type: string
+      title:
+        type: string
+      vendor_code:
+        type: string
+    type: object
+  dto.Catalog:
+    properties:
+      file:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+  dto.Category:
+    properties:
+      countitems:
+        type: string
+      id:
+        type: string
+      image:
+        type: string
+      title:
+        type: string
+    type: object
+  dto.CodeGenerator:
+    properties:
+      mail:
+        type: string
+      phone:
+        type: string
+    type: object
+  dto.CreateOrder:
+    properties:
+      delivery_payment:
+        $ref: '#/definitions/dto.OptionOfDeliveryAndPayment'
+      note:
+        type: string
+    type: object
+  dto.DefaultData:
+    properties:
+      data: {}
+    type: object
+  dto.DeleteCart:
+    properties:
+      product_id:
+        type: string
+    required:
+    - product_id
+    type: object
+  dto.DeleteFavourite:
+    properties:
+      product_id:
+        type: string
+    required:
+    - product_id
+    type: object
+  dto.ErrorResponse:
+    properties:
+      error:
+        type: string
+    type: object
+  dto.FavouritesProducts:
+    properties:
+      category:
+        type: string
+      category_name:
+        type: string
+      id:
+        type: string
+      image_128:
+        type: string
+      price:
+        type: string
+      title:
+        type: string
+      vendor_code:
+        type: string
+    type: object
+  dto.Feature:
+    properties:
+      body:
+        type: string
+      header:
+        type: string
+      icon:
+        type: string
+      id:
+        type: string
+    type: object
+  dto.FeedbackCall:
+    properties:
+      name:
+        type: string
+      phone:
+        type: string
+    required:
+    - name
+    - phone
+    type: object
+  dto.FeedbackSelection:
+    properties:
+      comment:
+        type: string
+      mail:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+    required:
+    - comment
+    - mail
+    - name
+    - phone
+    type: object
+  dto.GetOrder:
+    properties:
+      created_at:
+        type: string
+      id:
+        type: string
+      note:
+        type: string
+      status:
+        type: string
+    type: object
+  dto.HeadOffice:
+    properties:
+      address:
+        type: string
+      id:
+        type: string
+      mail:
+        type: string
+      name:
+        type: string
+      phone:
+        type: string
+      schedule:
+        type: string
+    type: object
+  dto.OptionOfDeliveryAndPayment:
+    properties:
+      appartment_office:
+        type: string
+      city:
+        type: string
+      entrance:
+        type: string
+      frame:
+        type: string
+      house:
+        type: string
+      order_id:
+        type: integer
+      street:
+        type: string
+    type: object
+  dto.Product:
+    properties:
+      category:
+        type: string
+      category_name:
+        type: string
+      code_1c:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      image_128:
+        type: string
+      image_432:
+        type: string
+      image_original:
+        type: string
+      price:
+        type: string
+      title:
+        type: string
+      vendor_code:
+        type: string
+    type: object
+  dto.ProductInformation:
+    properties:
+      category:
+        type: string
+      category_name:
+        type: string
+      code_1c:
+        type: string
+      description:
+        type: string
+      id:
+        type: string
+      image_128:
+        type: string
+      image_432:
+        type: string
+      image_original:
+        type: string
+      price:
+        type: string
+      quantity:
+        type: string
+      title:
+        type: string
+      vendor_code:
+        type: string
+    type: object
+  dto.RegisterUser:
+    properties:
+      code:
+        type: string
+      inn:
+        type: string
+      mail:
+        type: string
+      password:
+        type: string
+    required:
+    - code
+    - inn
+    - mail
+    - password
+    type: object
+  dto.Requisites:
+    properties:
+      address:
+        type: string
+      bank:
+        type: string
+      bik:
+        type: string
+      company_name:
+        type: string
+      inn:
+        type: string
+      kpp:
+        type: string
+      ks:
+        type: string
+      ogrn:
+        type: string
+      rs:
+        type: string
+    type: object
+  dto.Service:
+    properties:
+      body:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: string
+      image:
+        type: string
+      title:
+        type: string
+    type: object
+  dto.Slider:
+    properties:
+      down_text:
+        type: string
+      id:
+        type: string
+      image:
+        type: string
+      main_text:
+        type: string
+      upper_text:
+        type: string
+      url_link:
+        type: string
+    type: object
+  dto.Support:
+    properties:
+      body:
+        type: string
+      name:
+        type: string
+    required:
+    - body
+    - name
+    type: object
+  dto.Token:
+    properties:
+      token:
+        type: string
+    type: object
+  dto.UpdateCart:
+    properties:
+      count:
+        type: string
+      product_id:
+        type: string
+    required:
+    - count
+    - product_id
+    type: object
+  dto.UpdateFavourite:
+    properties:
+      product_id:
+        type: string
+    required:
+    - product_id
+    type: object
+  dto.UserAuth:
+    properties:
+      code:
+        type: string
+      mail:
+        type: string
+      password:
+        type: string
+      phone:
+        type: string
+    type: object
+  dto.UserInformation:
+    properties:
+      mail:
+        type: string
+    required:
+    - mail
+    type: object
+host: localhost:8080
+info:
+  contact:
+    email: adamstradvers@gmail.com
+    name: API Creator
+    url: https://t.me/amirich18
+  description: API for Kron-x market
+  title: Kron-x App API
+  version: "2.1"
+paths:
+  /api/cart:
+    get:
+      consumes:
+      - application/json
+      description: Get user cart
+      operationId: get_user_cart
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.CartProduct'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user cart
+      tags:
+      - cart
+  /api/cart/add:
+    post:
+      consumes:
+      - application/json
+      description: Update user cart
+      operationId: update_user_cart
+      parameters:
+      - description: new product info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateCart'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update user cart
+      tags:
+      - cart
+  /api/cart/del:
+    post:
+      consumes:
+      - application/json
+      description: Delete item from user cart
+      operationId: delete_user_cart
+      parameters:
+      - description: delete product info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.DeleteCart'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete item from user cart
+      tags:
+      - cart
+  /api/favourite:
+    get:
+      consumes:
+      - application/json
+      description: Get user favourites list
+      operationId: get_user_favourite
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.FavouritesProducts'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user favourites list
+      tags:
+      - favourite
+  /api/favourite/add:
+    post:
+      consumes:
+      - application/json
+      description: Update user favourites list
+      operationId: update_user_favourite
+      parameters:
+      - description: new favourite product info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UpdateFavourite'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update user favourites list
+      tags:
+      - favourite
+  /api/favourite/del:
+    post:
+      consumes:
+      - application/json
+      description: Delete item from user favourites list
+      operationId: delete_user_favourite
+      parameters:
+      - description: delete favourite product info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.DeleteFavourite'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Delete item from user favourites list
+      tags:
+      - favourite
+  /api/order:
+    get:
+      consumes:
+      - application/json
+      description: Get user order
+      operationId: get_user_order
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.GetOrder'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user order
+      tags:
+      - order
+    post:
+      consumes:
+      - application/json
+      description: Create order
+      operationId: create_user_order
+      parameters:
+      - description: order info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CreateOrder'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Create order
+      tags:
+      - order
+  /auth/code:
+    post:
+      consumes:
+      - application/json
+      description: Send user code for registration or authentication
+      operationId: generate_phone_code
+      parameters:
+      - description: user info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.CodeGenerator'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Generate sms-code
+      tags:
+      - auth
+  /auth/new_password:
+    post:
+      consumes:
+      - application/json
+      description: Change user password
+      operationId: new_password-account
+      parameters:
+      - description: account info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UserInformation'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Change password
+      tags:
+      - auth
+  /auth/sign_in:
+    post:
+      consumes:
+      - application/json
+      description: Authenticate user
+      operationId: authenticate-account
+      parameters:
+      - description: account info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.UserAuth'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.Token'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Sign-in
+      tags:
+      - auth
+  /auth/sign_up:
+    post:
+      consumes:
+      - application/json
+      description: Register user
+      operationId: create-account
+      parameters:
+      - description: account info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.RegisterUser'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.Token'
+        "401":
+          description: Unauthorized
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Sign-up
+      tags:
+      - auth
+  /catalog:
+    get:
+      consumes:
+      - application/json
+      description: Get all catalogs
+      operationId: get_all_catalogs
+      parameters:
+      - description: Catalog limit in response
+        in: query
+        name: limit
+        type: string
+      - description: Response page
+        in: query
+        name: page
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Catalog'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get all catalogs
+      tags:
+      - catalog
+  /category:
+    get:
+      consumes:
+      - application/json
+      description: Get all categories
+      operationId: get_all_categories
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Category'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get all categories
+      tags:
+      - category
+  /category_detail:
+    get:
+      consumes:
+      - application/json
+      description: Get category detail
+      operationId: get_detail_category
+      parameters:
+      - description: Required category id
+        in: query
+        name: cat_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Category'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get category detail
+      tags:
+      - category
+  /cms/about:
+    get:
+      consumes:
+      - application/json
+      description: Get company about
+      operationId: get_all_about
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.About'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get company about
+      tags:
+      - cms
+  /cms/features:
+    get:
+      consumes:
+      - application/json
+      description: Get all features
+      operationId: get_all_features
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Feature'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get all features
+      tags:
+      - cms
+  /cms/feedback_call:
+    post:
+      consumes:
+      - application/json
+      description: Send feedback call request
+      operationId: send_feedback_call
+      parameters:
+      - description: new feed back request info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.FeedbackCall'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Send feedback call request
+      tags:
+      - cms
+  /cms/feedback_selection:
+    post:
+      consumes:
+      - application/json
+      description: Send feedback selection request
+      operationId: send_feedback_selection
+      parameters:
+      - description: new feed back details selection request info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.FeedbackSelection'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Send feedback selection request
+      tags:
+      - cms
+  /cms/headoffice:
+    get:
+      consumes:
+      - application/json
+      description: Get all head offices
+      operationId: get_all_head offices
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.HeadOffice'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get all head offices
+      tags:
+      - cms
+  /cms/req:
+    get:
+      consumes:
+      - application/json
+      description: Get company requisites
+      operationId: get_all_requisites
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Requisites'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get company requisites
+      tags:
+      - cms
+  /cms/service:
+    get:
+      consumes:
+      - application/json
+      description: Get all services
+      operationId: get_all_services
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Service'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get all services
+      tags:
+      - cms
+  /cms/service_detail:
+    get:
+      consumes:
+      - application/json
+      description: Get service detail
+      operationId: get_detail_service
+      parameters:
+      - description: Required service id
+        in: query
+        name: service_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Service'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get service detail
+      tags:
+      - cms
+  /cms/sliders:
+    get:
+      consumes:
+      - application/json
+      description: Get all sliders
+      operationId: get_all_sliders
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Slider'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get all sliders
+      tags:
+      - cms
+  /cms/support:
+    post:
+      consumes:
+      - application/json
+      description: Send support request
+      operationId: send_support
+      parameters:
+      - description: new support request info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/dto.Support'
+      produces:
+      - application/json
+      responses:
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Send support request
+      tags:
+      - cms
+  /product_detail:
+    get:
+      consumes:
+      - application/json
+      description: Get product detail
+      operationId: get_detail_product
+      parameters:
+      - description: Required product id
+        in: query
+        name: prod_id
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.ProductInformation'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get product detail
+      tags:
+      - product
+  /products:
+    get:
+      consumes:
+      - application/json
+      description: Get all products with params
+      operationId: get_all_products
+      parameters:
+      - description: Products belonging to this category
+        in: query
+        name: cat_id
+        type: string
+      - description: Product limit in response
+        in: query
+        name: limit
+        type: string
+      - description: Response page
+        in: query
+        name: page
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Product'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Get all products
+      tags:
+      - product
+  /search:
+    get:
+      description: Get product by search
+      operationId: get_product_by_search
+      parameters:
+      - description: Search text
+        in: query
+        name: s
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/dto.DefaultData'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/dto.Product'
+                  type: array
+              type: object
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Search
+      tags:
+      - search
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

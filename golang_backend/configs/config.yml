@@ -1,0 +1,18 @@
+port: "8080"
+
+db:
+  host: "89.108.70.24"
+  username: "gumaonelove"
+  dbname: "shop2"
+  port: "5432"
+
+smtp:
+  sender_email: "valornewacc@gmail.com"
+  host: "smtp.gmail.com"
+  port: "587"
+  director_email: "info@kron-x.ru"
+  mime_headers: "MIME-version: 1.0;\nContent-Type: text/html; charset=\"UTF-8\";\n\n"
+
+files_paths:
+  media_url: "https://api.kron-x.ru/media/"
+  domain: "https://api.kron-x.ru/data/photos/"
