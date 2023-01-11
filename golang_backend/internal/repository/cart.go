@@ -2,12 +2,13 @@ package repository
 
 import (
 	"fmt"
-	"gorm.io/gorm"
-	"gorm.io/gorm/clause"
 	"kron-x/internal/dto"
 	models2 "kron-x/internal/models"
 	"kron-x/pkg"
 	"strconv"
+
+	"gorm.io/gorm"
+	"gorm.io/gorm/clause"
 )
 
 type CartRepository struct {
@@ -75,7 +76,7 @@ func (r *CartRepository) UpdateUserCart(userUUID int, product *dto.UpdateCart) e
 		cartProducts.TotalPrice = pkg.Round(newTotalPrice)
 		r.db.Save(&cartProducts)
 	} else {
-		r.db.Where("user_id = ?", userUUID).Find(&cart)
+		r.db.Where("user_id = ?", userUUID).Where("in_order = false").Find(&cart)
 		newCartProduct := models2.CartProducts{
 			ProductID:  newProductId,
 			Count:      newProductCount,
